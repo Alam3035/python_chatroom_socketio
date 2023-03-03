@@ -12,6 +12,13 @@
         <button type="submit" name="join">Join a Room</button>
     </div>
     <button type="submit" name="create" class="create_btn">Create a Room</button>
+    {% if error %}
+    <ul>
+        <li>
+            {{error}}
+        </li>
+    </ul>
+    {% endif %}
 </form>
 
 {% endblock %}
