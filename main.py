@@ -50,7 +50,11 @@ def home():
 
 @app.route("/room")
 def room():
-    return render_template("room.html")
+    room = session.get("room")
+    if room is None or session.get("name") is None or room not in rooms:
+        return redirect(url_for("home"))
+
+    return render_template("room.html", room=room)
 
 if __name__ == "__main__":
     socketio.run(app, debug = True)
