@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %} 
 
-<form method="post">
+<form method="post" class="form_buttons">
     <h3>Enter the Chatroom</h3>
     <div>
         <label>Name: </label>
@@ -11,7 +11,7 @@
         <input type="text" placeholder="Room Code" name="code" value="{{code}}">
         <button type="submit" name="join">Join a Room</button>
     </div>
-    <button type="submit" name="create" class="create">Create a Room</button>
+    <button type="submit" name="create" class="create_btn">Create a Room</button>
 </form>
 
 {% endblock %}
